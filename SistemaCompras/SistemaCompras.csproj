@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68494ADD-DA9E-4469-9C83-96006584E9DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SistemaCompras</RootNamespace>
+    <AssemblyName>SistemaCompras</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Elementos.cs" />
+    <Compile Include="Edit\FrmEdArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FrmEdArticulos.Designer.cs">
+      <DependentUpon>FrmEdArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\FrmEdDepartamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FrmEdDepartamentos.Designer.cs">
+      <DependentUpon>FrmEdDepartamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\FrmEdBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FrmEdBase.Designer.cs">
+      <DependentUpon>FrmEdBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\FrmEdEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FrmEdEmpleados.Designer.cs">
+      <DependentUpon>FrmEdEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\FrmEdMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FrmEdMarcas.Designer.cs">
+      <DependentUpon>FrmEdMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\FrmEdOrdenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FrmEdOrdenes.Designer.cs">
+      <DependentUpon>FrmEdOrdenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\FrmEdProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FrmEdProveedores.Designer.cs">
+      <DependentUpon>FrmEdProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\FrmEdSolicitudes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FrmEdSolicitudes.Designer.cs">
+      <DependentUpon>FrmEdSolicitudes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit\FrmEdUnidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit\FrmEdUnidades.Designer.cs">
+      <DependentUpon>FrmEdUnidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionComprasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionComprasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\FrmEdArticulos.resx">
+      <DependentUpon>FrmEdArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\FrmEdDepartamentos.resx">
+      <DependentUpon>FrmEdDepartamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\FrmEdBase.resx">
+      <DependentUpon>FrmEdBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\FrmEdEmpleados.resx">
+      <DependentUpon>FrmEdEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\FrmEdMarcas.resx">
+      <DependentUpon>FrmEdMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\FrmEdOrdenes.resx">
+      <DependentUpon>FrmEdOrdenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\FrmEdProveedores.resx">
+      <DependentUpon>FrmEdProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\FrmEdSolicitudes.resx">
+      <DependentUpon>FrmEdSolicitudes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\FrmEdUnidades.resx">
+      <DependentUpon>FrmEdUnidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="GestionComprasDataSet.xsc">
+      <DependentUpon>GestionComprasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GestionComprasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionComprasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionComprasDataSet.xss">
+      <DependentUpon>GestionComprasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="computer-icons-like-button-icon-design-search-png-clip-art.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="search3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Save-Button-PNG-Transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="savebutton.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
