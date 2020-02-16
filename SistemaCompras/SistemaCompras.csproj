@@ -209,5 +209,11 @@
   <ItemGroup>
     <None Include="savebutton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SqlQuery.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SqlQuery.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

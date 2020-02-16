@@ -99,5 +99,37 @@ namespace SistemaCompras.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to create database GestionCompras
+        ///
+        ///use GestionCompras;
+        ///
+        ///create table Departamentos(
+        ///ID_Departamento int primary key identity(1,1),
+        ///Nombre_Departamento varchar(100) not null,
+        ///Estado_Departamento bit
+        ///)
+        ///
+        ///create table Marcas(
+        ///ID_Marca int primary key identity(1,1),
+        ///Descripcion_Marca varchar(50) not null,
+        ///Estado_Marca bit
+        ///)
+        ///
+        ///create table Unidades_Medida (
+        ///ID_Unidad int primary key identity(1,1),
+        ///Descripcion_Unidad varchar(50) not null,
+        ///Estado_Unidad bit
+        ///)
+        ///
+        ///create table Proveedores (
+        ///ID_Provee [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SqlQuery {
+            get {
+                return ResourceManager.GetString("SqlQuery", resourceCulture);
+            }
+        }
     }
 }
